@@ -1,0 +1,16 @@
+hr {
+  clear: both;
+  visibility: hidden;
+}
+
+body {
+  background: url("images/xxtramile.jpg") no-repeat fixed;
+}
+
+.ui.container {
+  background: white
+}
+
+.ui.centered.header, .ui.center.aligned.header {
+  color: green;
+}
