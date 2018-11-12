@@ -23,6 +23,11 @@ body {
   font-weight: bolder
 }
 
+.title {
+  
+  text-transform: uppercase;
+}
+
 p {
 font-family: 'Lora', serif;
   
