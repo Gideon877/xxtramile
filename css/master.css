@@ -8,9 +8,32 @@ body {
 }
 
 .ui.container {
-  background: white
+  background: white;
 }
 
-.ui.centered.header, .ui.center.aligned.header {
+.ui.centered.header,
+.ui.center.aligned.header {
   color: green;
 }
+
+.item .description {
+  font-size: x-small;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-weight: bolder
+}
+
+p {
+font-family: 'Lora', serif;
+  
+}
+
+/* 
+font-family: 'Playfair Display', serif;
+font-family: 'Lora', serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Crimson Text', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Hind Siliguri', sans-serif;
+ */
