@@ -4,7 +4,7 @@ hr {
 }
 
 body {
-  background: url("images/xxtramile.jpg") no-repeat fixed;
+  background: url("../images/xxm/xxtramile.jpg") no-repeat fixed;
 }
 
 .ui.container {
@@ -20,17 +20,16 @@ body {
   font-size: x-small;
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
-  font-weight: bolder
+  font-weight: bolder;
+
 }
 
 .title {
-  
   text-transform: uppercase;
 }
 
 p {
-font-family: 'Lora', serif;
-  
+  font-family: "Lora", serif;
 }
 
 /* 
@@ -41,4 +40,11 @@ font-family: 'Noto Serif', serif;
 font-family: 'Crimson Text', serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Hind Siliguri', sans-serif;
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Noto Sans TC', sans-serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Lora', serif;
+font-family: 'Work Sans', sans-serif;
  */

@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>xxtramile MUSIC</title>
-    <link rel="shortcut icon" href="css/images/xxtramile.png" />
+    <link rel="shortcut icon" href="static/images/xxm/xxtramile.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/semantic/semantic.css" />
+    <link rel="stylesheet" href="static/css/semantic/semantic.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="css/semantic/semantic.js"></script>
+    <script src="static/css/semantic/semantic.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Siliguri|Libre+Baskerville|Lora|Noto+Serif|PT+Sans+Narrow|Playfair+Display" rel="stylesheet" />
-    <link rel="stylesheet" href="css/master.css" />
-    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="static/css/master.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Noto+Serif+SC|Open+Sans|Playfair+Display|Work+Sans" rel="stylesheet">
+    <script src="static/js/index.js"></script>
 </head>
 <style>
     .ui.horizontal.divider:after,
@@ -26,14 +27,28 @@
 
 <body>
     <div class="ui container">
-        <!-- Body -->
-        <div class="ui floating message">
-            <h2 class="ui center aligned icon header">
-        <img class="" src="css/images/xxtramile.png" />
-        </h2>
-        </div>
-        <div class="ui segment container">
+        <hr>
+        <div class="ui labeled icon menu">
+            <div class="active item">
+                <i class="home icon"></i> <a href="">Home</a>
+            </div>
+            <div class="item">
+                <i class="users icon"></i> <a href="templates/founder.html">Founder</a>
+            </div>
 
+            <div class="right item">
+                <i class="music icon"></i>
+                <a href="templates/artists.html">Artists
+                </a>
+            </div>
+            <div class="item">
+                    <i class="random icon"></i> <a href="templates/projects.html">Projects</a>
+                </div>
+        </div>
+
+        <!---------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="ui segment container">
             <h4 class="ui horizontal divider header">
           <i class="tag icon"></i> About
         </h4>
@@ -119,11 +134,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthatthingaboutdeep%2F&tabs=timeline&width=1680&height=1050&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="1680" height="1050" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
 
-
-            <!-- Footer -->
-            <!-- <div class="ui piled segment"> -->
             <div class="ui vertical footer segment">
                 <div class="ui container">
                     <div class="ui stackable divided equal height stackable grid">
@@ -138,7 +149,6 @@
                         <div class="three wide column">
                             <h4 class="ui header">Platforms</h4>
                             <div class="ui link list">
-                                <!-- <a href="#" class="item">Github</a> -->
                                 <a href="https://www.facebook.com/xxtramilemsic/" class="item" target="_blank">Facebook</a>
                                 <a href="#" class="item">Twitter</a>
                                 <a href="#" class="item">Instagram</a>
