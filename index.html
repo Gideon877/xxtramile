@@ -13,16 +13,15 @@
     <script src="static/css/semantic/semantic.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Siliguri|Libre+Baskerville|Lora|Noto+Serif|PT+Sans+Narrow|Playfair+Display" rel="stylesheet" />
     <link rel="stylesheet" href="static/css/master.css" />
+    <script src="./static/js/lib/data.js"></script>
+    <script src="./static/js/lib/handlebars-v4.0.12.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Noto+Serif+SC|Open+Sans|Playfair+Display|Work+Sans" rel="stylesheet">
-    <script src="static/js/index.js"></script>
+    
 </head>
 <style>
-    .ui.horizontal.divider:after,
-    .ui.horizontal.divider:before {
+    .ui.horizontal.divider:after, .ui.horizontal.divider:before {
         background-image: url('');
-    }
-
-    ;
+    };
 </style>
 
 <body>
@@ -35,76 +34,23 @@
             <div class="item">
                 <i class="users icon"></i> <a href="templates/founder.html">Founder</a>
             </div>
-
-            <!-- <div class="right item">
+            <div class="right item">
                 <i class="music icon"></i>
                 <a href="templates/artists.html">Artists
                 </a>
             </div>
             <div class="item">
                 <i class="random icon"></i> <a href="templates/projects.html">Projects</a>
-            </div> -->
+            </div>
         </div>
 
-        <!---------------------------------------------------------------------------------------------------------------------------->
-
+        
         <div class="ui segment container">
             <h4 class="ui horizontal divider header">
-          <i class="tag icon"></i> About
-        </h4>
+                <i class="tag icon"></i> About
+            </h4>
 
-            <div class="ui raised segment">
-                <h4 class="title">Company Overview</h4>
-                <p><b>xxtramile</b> music is an agency based in Cape Town which operates in four main areas: Events, Artist Development and Management, Content licensing, Production and Publishing of music.
-                </p>
-                <p> The xxtramile Music policy is to explore the underprivileged areas in the Western Cape region and prepare them with knowledge of the entertainment industry.
-                </p>
-                <p>
-                    We are building brands out of the devoted individuals as some need skills and guidance to surpass ahead to reaching their success.
-                </p>
-                <p> The business shapes and notifies the fundamentals of which needs to be taken into consideration from the technical aspects of, with a broad spectrum of unrecognised talent, lack of intellect of what it contains to secure momentum in the
-                    music trade, saw the birth of the company (XXTRAMILE MUSIC).
-                </p>
-                <p> Product scope: Entertainment, Development-Education-Knowledge, empowering-management. The xxtramile music consists of building a marketplace for the Western Cape in the entertainment industry. Wysig Founding date 10 December 2015
-                </p>
-            </div>
-
-            <div class="ui fluid accordion">
-                <div class="ui black piled segment">
-                    <div class="title">
-                        <i class="dropdown icon"></i> Mission Statement
-                    </div>
-                    <div class="content">
-                        <p class="transition hidden">
-                            Expand <em><b>xxtramile</b></em> brand into new markets while promoting and expanding our scope of management, passionately empowering people.
-                        </p>
-                        <p class="transition hidden">
-                            This is the attitude that we promote throughout our business.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="ui blue stacked segment">
-                    <div class="title">
-                        <i class="dropdown icon"></i> Vission Statement
-                    </div>
-                    <div class="content">
-                        <p class="transition visible" style="display: block !important;">
-                            To be the leading <em>Artist & EVENT Management</em> company in Africa.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="ui violet piled segment">
-                    <div class="title"><i class="dropdown icon"></i> What we do?</div>
-                    <div class="content">
-                        <p class="transition hidden">
-                            The xxtramile music team works together by implementing both efforts and expertise to maximise participation and to enhance the scope of artist and events we manage.
-                        </p>
-                        <p class="transition hidden">We have developed a variety of services.-PUBLISHNG MUSIC-CONTENT LICENSING-PRODUCTION-CLUB,EVENTS&ARTIST MANAGEMENT-FASHION EVENTS-road shows&product launches</p>
-                    </div>
-                </div>
-            </div>
+            <div class="ui fluid accordion" id="accordion"></div>
 
             <div class="ui green piled segment">
                 <div class="ui list">
@@ -135,40 +81,56 @@
                 </div>
             </div>
 
-            <div class="ui vertical footer segment">
-                <div class="ui container">
-                    <div class="ui stackable divided equal height stackable grid">
-                        <div class="three wide column">
-                            <h4 class="ui header">About</h4>
-                            <div class="ui link list">
-                                <a href="#" class="item">Sitemap</a>
-                                <a class="item" href="mailto:xxtramilemusic@gmail.com">Contact Us</a>
+            <div class="ui red piled segment">
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fxxtramilemsic%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
 
+            <div id="footer"></div>
+            
+            <script id="footerScript" type="text/x-handlebars-template">
+                <div class="ui vertical footer segment">
+                    <div class="ui container">
+                        <div class="ui stackable divided equal height stackable grid">
+                            {{#each data}}
+                            <div class="{{column}} wide column">
+                                <h4 class="ui header">{{header}}</h4>
+                                <div class="ui link list">
+                                    {{#each this.link}}
+                                    <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
+                                   {{/each}}
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="three wide column">
-                            <h4 class="ui header">Platforms</h4>
-                            <div class="ui link list">
-                                <a href="https://www.facebook.com/xxtramilemsic/" class="item" target="_blank">Facebook</a>
-                                <a href="#" class="item">Twitter</a>
-                                <a href="#" class="item">Instagram</a>
-                            </div>
-                        </div>
-                        <div class="seven wide column">
-                            <h4 class="ui header">xxtramile</h4>
-                            <div class="ui link list">
-                                <a class="item">
-                                    <i class="flag icon"></i>
-                                    December 2015 ©
-                                </a>
-                            </div>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
-            </div>
+            </script>
         </div>
     </div>
-    </div>
+    
+    <script id="statementsScript" type="text/x-handlebars-template">
+        <div class="ui raised segment">
+            <h4 class="title">Company Overview</h4>
+            {{#each Overview}}
+                <p>{{{paragraph}}}</p>
+            {{/each}}
+        </div>
+
+        <div class="ui fluid accordion">
+            {{#each data}}
+            <div class="ui {{color}} piled segment">
+                <div class="title">
+                    <i class="dropdown icon"></i> {{title}}
+                </div>
+                <div class="content">
+                    {{{content}}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <script src="static/js/index.js"></script>
 </body>
 
 </html>

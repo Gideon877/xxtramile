@@ -1,5 +1,53 @@
+'use strict';
+
 $(document).ready(function() {
   $(".ui.accordion").accordion();
+
+  const card = document.getElementById('card');
+  const showCardScript = document.getElementById('showCardScript');
+  const accordion = document.getElementById('accordion');
+  const statements = document.getElementById('statementsScript');
+  const showArtists = document.getElementById('showArtists');
+  const artistScript = document.getElementById('artistScript');
+  const footer = document.getElementById('footer');
+  const footerScript = document.getElementById('footerScript');
+
+
+  let cardTemplate, accordionTemplate, cardTemplateTag, accordionTemplateTag, artistsTemplate, artistsTag, footerTemplate, footerTag;
+
+  if (artistScript) {
+    artistsTemplate = Handlebars.compile(artistScript.innerHTML);
+    artistsTag = artistsTemplate({
+      data: Artists || [{}]
+    });
+    showArtists.innerHTML = artistsTag;
+  } 
+
+  if (showCardScript) {
+    cardTemplate = Handlebars.compile(showCardScript.innerHTML);
+    cardTemplateTag = cardTemplate({
+      data: Founders || [{}]
+    });
+    card.innerHTML = cardTemplateTag;
+  } 
+
+  if (footerScript) {
+    footerTemplate = Handlebars.compile(footerScript.innerHTML);
+    footerTag = footerTemplate({
+      data: Footer
+    });
+    footer.innerHTML = footerTag;
+  }
+
+  if (statements) {
+    accordionTemplate = Handlebars.compile(statements.innerHTML);
+    accordionTemplateTag = accordionTemplate({
+      data: About || [{}],
+      Overview
+    });
+    accordion.innerHTML = accordionTemplateTag;
+  }
+
 });
 
 // $(document).ready(function() {

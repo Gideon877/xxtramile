@@ -14,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Siliguri|Libre+Baskerville|Lora|Noto+Serif|PT+Sans+Narrow|Playfair+Display" rel="stylesheet" />
     <link rel="stylesheet" href="../static/css/master.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Noto+Serif+SC|Open+Sans|Playfair+Display|Work+Sans" rel="stylesheet">
-    
+    <script src="../static/js/lib/data.js"></script>
+    <script src="../static/js/lib/handlebars-v4.0.12.js"></script>
 </head>
 <style>
     .ui.horizontal.divider:after,
@@ -38,79 +39,66 @@
 
             <div class="right item">
                 <i class="music icon"></i>
-                <a href="artists.html">Artists
-                </a>
+                <a href="artists.html">Artists</a>
             </div>
             <div class="active item">
-                    <i class="random icon"></i> <a>Projects</a>
-                </div>
+                <i class="random icon"></i> <a>Projects</a>
+            </div>
         </div>
-
-
 
         <div class="ui segment container">
             <h4 class="ui horizontal divider header">
-          <i class="random icon"></i> About
-        </h4>
+                <i class="handshake icon"></i> Introducing
+            </h4>
 
-        <div class="ui raised segment" style="background: #f2f2f2;">
-            <img class="ui centered medium circular image" src="../static/images/xxm/ttad.jpg">
-            <hr><br>
-            <div class="ui fluid accordion">
-            <div class="ui blue stacked segment">
-                    <div class="title">
-                        <i class="dropdown icon"></i> What is That Thing About Deep?
-                    </div>
-                    <div class="content">
-                        <p class="transition visible" style="display: block !important;">
-                                It's a beat that bridges all cultures, creeds and ethnicities, connecting all who feel it, in a diverse and dynamic crowd, focused on quality musical experiences. <br> It is a common rhythm that unites, allowing people from different backgrounds to connect and experience the musical journey together.
-                        </p>
-                    </div>
-                </div></div>
-        </div>
-
-
-        <div class="container">
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/456151212&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        </div>
-
-      
-
-            <div class="ui vertical footer segment">
-                <div class="ui container">
-                    <div class="ui stackable divided equal height stackable grid">
-                        <div class="three wide column">
-                            <h4 class="ui header">About</h4>
-                            <div class="ui link list">
-                                <a href="#" class="item">Sitemap</a>
-                                <a class="item" href="mailto:xxtramilemusic@gmail.com">Contact Us</a>
-
+            <div class="ui segment">
+                <div class="ui list">
+                    <div class="item">
+                        <img class="ui avatar image" src="../static/images/xxm/ttad.jpg">
+                        <div class="content">
+                            <a class="header" href="https://www.facebook.com/thatthingaboutdeep"  target="_blank">That Thing About Deep</a>
+                            <div class="description">
+                                <p style="text-transform: none; font-size: small">
+                                    It's a beat that bridges all cultures, creeds and ethnicities, connecting all who feel it, in a diverse and dynamic crowd, focused on quality musical experiences. <br>
+                                    It is a common rhythm that unites, allowing people from different backgrounds to connect and experience the musical journey together. <br> <hr>
+                                    <i>August 2018 ©</i>
+                                </p>
                             </div>
                         </div>
-                        <div class="three wide column">
-                            <h4 class="ui header">Platforms</h4>
-                            <div class="ui link list">
-                                <a href="https://www.facebook.com/xxtramilemsic/" class="item" target="_blank">Facebook</a>
-                                <a href="#" class="item">Twitter</a>
-                                <a href="#" class="item">Instagram</a>
-                            </div>
-                        </div>
-                        <div class="seven wide column">
-                            <h4 class="ui header">xxtramile</h4>
-                            <div class="ui link list">
-                                <a class="item">
-                                    <i class="flag icon"></i>
-                                    December 2015 ©
-                                </a>
-                            </div>
+    
+                        <div class="ui clearing divider"></div>
+    
+                        <div class="container">
+                                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/505922733&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            <!-- <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/456151212&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> -->
                         </div>
                     </div>
                 </div>
+
+                <div id="footer"></div>
+            
+                <script id="footerScript" type="text/x-handlebars-template">
+                    <div class="ui vertical footer segment">
+                        <div class="ui container">
+                            <div class="ui stackable divided equal height stackable grid">
+                                {{#each data}}
+                                <div class="{{column}} wide column">
+                                    <h4 class="ui header">{{header}}</h4>
+                                    <div class="ui link list">
+                                        {{#each this.link}}
+                                        <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
+                                       {{/each}}
+    
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </script>
             </div>
         </div>
     </div>
-    </div>
-
 
     <script src="../static/js/index.js"></script>
 </body>
