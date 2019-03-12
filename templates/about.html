@@ -35,48 +35,80 @@
             <div class="item">
                 <i class="users icon"></i> <a href="founder.html">Founder</a>
             </div>
-            <div class="item">
-                    <i class="info circle icon"></i> <a href="about.html">About</a>
+            <div class="active item">
+                    <i class="info circle icon"></i> <a href="#">About</a>
                 </div>
 
-            <div class="right active item">
+            <div class="right item">
                 <i class="music icon"></i>
-                <a href="#">Artists
+                <a href="artists.html">Artists
                 </a>
             </div>
             <div class="item">
                 <i class="random icon"></i> <a href="projects.html">Projects</a>
             </div>
         </div>
-
-        <div class="ui segment container">
+    </div>
+    <div class="ui segment container">
             <h4 class="ui horizontal divider header">
-                <i class="music icon"></i> Artists
+                <i class="tag icon"></i> About
             </h4>
 
-            <div id="showArtists"></div>
+            <div class="ui fluid accordion" id="accordion"></div>
 
-            <script id="artistScript" type="text/x-handlebars-template">
-                <div class="ui raised segment">
-                    <div class="ui divided items">
-                        {{#each data}}
-                        <div class="item">
-                            <div class="image">
-                                <img src="../static/images/artists/{{imgPath}}">
-                            </div>
-                            <div class="content">
-                                <a class="header" href="https://www.facebook.com/{{facebookId}}" target="_blank">{{fullName}}</a>
-                                <div class="meta">
-                                    <span class="cinema" style="text-transform:uppercase;">{{title}}</span>
-                                </div>
-                                <div class="description" style="text-transform: none;">
-                                    <p>{{{description}}}</p>
-                                </div>
-                            </div>
+            <div class="ui green piled segment">
+                <div class="ui list">
+                    <div class="item">
+                        <i class="users icon"></i>
+                        <div class="content">
+                            xxtramile
                         </div>
-                        {{/each}}
-                        <hr>
                     </div>
+                    <div class="item">
+                        <i class="marker icon"></i>
+                        <div class="content">
+                            1, Zone 16 St, Langa, Cape Town, 7455, South Africa
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="mail icon"></i>
+                        <div class="content">
+                            <b>xxtramilemusic@gmail.com</b>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="phone icon"></i>
+                        <div class="content">
+                            +2763 595 4226
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui red piled segment">
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fxxtramilemsic%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+
+
+            <script id="statementsScript" type="text/x-handlebars-template">
+                <div class="ui raised segment">
+                    <h4 class="title">Company Overview</h4>
+                    {{#each Overview}}
+                        <p>{{{paragraph}}}</p>
+                    {{/each}}
+                </div>
+        
+                <div class="ui fluid accordion">
+                    {{#each data}}
+                    <div class="ui {{color}} piled segment">
+                        <div class="title">
+                            <i class="dropdown icon"></i> {{title}}
+                        </div>
+                        <div class="content">
+                            {{{content}}}
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
             </script>
 
@@ -105,5 +137,4 @@
     </div>
     <script src="../static/js/index.js"></script>
 </body>
-
 </html>
