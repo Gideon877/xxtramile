@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 150px;
+    }
+
+    @media screen and (min-width: 601px) {
+        div.column {
+            font-size: 12px;
+        }
+
+        div.row {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        div.column {
+            font-size: 16px;
+           
+        }
+        div.row {
+            display: inline;
+            background-color: red;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h2>Header</h2>
+                <p>When we want to override a method, we can use this annotation to say to the compiler we are overriding an existing method. If the compiler finds that there is no matching method found in super class then generates a warning. This is not mandatory to use @Override when we override a method. But I have seen Eclipse IDE automatically adding this @Override annotation. Though it is not mandatory, it is considered as a best practice.</p>
+                <img src="static/images/xxm/xxtramile.png" alt="">
+            </div>
+            <div class="column">
+                <h2>Header</h2>
+                <p>
+                    <img style="float: right;" src="static/images/xxm/xxtramile.png" alt=""/>
+                    <br /><span style="font-size: small;">When we want to override a method, we can use this annotation to say to the compiler we are overriding an existing method. If the compiler finds that there is no matching method found in super class then generates a warning. This is not mandatory to use @Override when we override a method. But I have seen Eclipse IDE automatically adding this @Override annotation. Though it is not mandatory, it is considered as a best practice.</span>
+                    </p>
+                
+            </div>
+            <div class="column">
+                <h2>Header</h2>
+                <p>When we want to override a method, we can use this annotation to say to the compiler we are overriding an existing method. If the compiler finds that there is no matching method found in super class then generates a warning. This is not mandatory to use @Override when we override a method. But I have seen Eclipse IDE automatically adding this @Override annotation. Though it is not mandatory, it is considered as a best practice.</p>
+                <img src="static/images/xxm/xxtramile.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
