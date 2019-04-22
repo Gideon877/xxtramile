@@ -20,7 +20,7 @@ $(document).ready(function() {
     artistsTag = artistsTemplate({
       data: Artists || [{}]
     });
-    showArtists.innerHTML = artistsTag;
+    if(showArtists) showArtists.innerHTML = artistsTag;
   } 
 
   if (showCardScript) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
     cardTemplateTag = cardTemplate({
       data: Founders || [{}]
     });
-    card.innerHTML = cardTemplateTag;
+    if(card) card.innerHTML = cardTemplateTag;
   } 
 
   if (footerScript) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     footerTag = footerTemplate({
       data: Footer
     });
-    footer.innerHTML = footerTag;
+    if(footer) footer.innerHTML = footerTag;
   }
 
   if (statements) {
@@ -45,7 +45,7 @@ $(document).ready(function() {
       data: About || [{}],
       Overview
     });
-    accordion.innerHTML = accordionTemplateTag;
+    if(accordion) accordion.innerHTML = accordionTemplateTag;
   }
 
 });
