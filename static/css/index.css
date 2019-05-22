@@ -1,0 +1,123 @@
+
+    .ui.horizontal.divider:after, .ui.horizontal.divider:before {
+        /* background-image: url(''); */
+    };
+    div.jumbotron.p-4.p-md-5 {
+        background-color: red;
+        color: orange;
+        font-family: cursive;
+    }
+    .link {
+        /* color: wheat; */
+        font-family: Noto Serif SC;
+        text-align: center;
+    }
+
+    .jumbotron {
+        background-image: url("../images/xxm/xxtramile.jpg");
+        background-size:auto;
+    }
+
+    .carousel-inner > .item > img {
+        width:640px;
+        height:360px;
+    }
+
+    @media only screen and (max-width: 600px)  { 
+        body {
+            background: black;
+            font-size: 0rem;
+            width: fit-content;
+        }
+        .ui.labeled.icon.menu .item {
+            min-width: 0em;
+        }
+
+        /* #menu {
+            background: green;
+            font-size: xx-small;
+        } */
+    }
+    @media only screen and (min-width: 600px)  {
+        body {
+            background: url("../images/club/bg.jpg");
+        }
+        .w-100 {
+            height: fit-content;
+        }
+
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .ui.container {
+        background: #0a1c47;
+    }
+
+    h4.ui.header {
+        color: red;
+    }
+    .ui.link.list .item, .ui.link.list a.item {
+        color: wheat;
+    }
+
+    .display-4 {
+        font-family: cursive;
+    }
+    i.icon.flag.outline:before  {
+        color: gold;
+    }
+
+/* animation */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+/* 
+body{
+  padding: 40px;
+  background-color: #4268a5;  
+} */
+
+h1 {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  /* font-size: 28px; */
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 2s steps(10,end) 1s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* moving picture */
+/* <div id="sky">
+	<div id="clouds"></div>
+</div> */
+#sky {
+	overflow: hidden;
+}
+#clouds {
+	width: 200%;
+	height: 400px;
+	background-image: url('pic.jpg');
+	background-size: cover;
+	-webkit-animation: movingclouds 25s linear infinite;
+	-moz-animation: movingclouds 25s linear infinite;
+	-o-animation: movingclouds 25s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-left: 0%;}
+	100% {margin-left: -100%;}
+}

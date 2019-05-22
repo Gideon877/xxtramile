@@ -16,6 +16,11 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+/* menu bar calors */
+#menu {
+  background-color: #f7f9f7;
+  background: linear-gradient(to bottom right, #69fb6b, #f7f9f7);
+}
 
 
 #footer {
