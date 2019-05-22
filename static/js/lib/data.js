@@ -62,7 +62,7 @@ const Footer = [
         link: [
             {
                 url: '#',
-                title: `<i class="flag icon"></i>December 2015 ©`
+                title: `<i class="flag outline icon"></i>December 2015 ©`
             }
         ]
     },

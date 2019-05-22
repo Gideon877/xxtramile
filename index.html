@@ -17,6 +17,8 @@
     <script src="./static/js/lib/handlebars-v4.0.12.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Noto+Serif+SC|Open+Sans|Playfair+Display|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css"> -->
     <!-- bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -31,12 +33,132 @@
         color: orange;
         font-family: cursive;
     }
-</style>
+    .link {
+        /* color: wheat; */
+        font-family: Noto Serif SC;
+        text-align: center;
+    }
 
-<body>
+    .jumbotron {
+        background-image: url("static/images/xxm/xxtramile.jpg");
+        background-size:auto;
+    }
+
+    .carousel-inner > .item > img {
+        width:640px;
+        height:360px;
+    }
+
+    #menu {
+        background-color: #f7f9f7;
+        background: linear-gradient(to bottom right, #69fb6b, #f7f9f7);
+    }
+
+    @media only screen and (max-width: 600px)  { 
+        body {
+            background: black;
+            font-size: 0rem;
+            width: fit-content;
+        }
+        .ui.labeled.icon.menu .item {
+            min-width: 0em;
+        }
+
+        /* #menu {
+            background: green;
+            font-size: xx-small;
+        } */
+    }
+    @media only screen and (min-width: 600px)  {
+        body {
+            background: url("static/images/club/bg.jpg");
+        }
+        .w-100 {
+            height: fit-content;
+        }
+
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .ui.container {
+        background: #0a1c47;
+    }
+
+    h4.ui.header {
+        color: red;
+    }
+    .ui.link.list .item, .ui.link.list a.item {
+        color: wheat;
+    }
+
+    .display-4 {
+        font-family: cursive;
+    }
+    i.icon.flag.outline:before  {
+        color: gold;
+    }
+
+/* animation */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+/* 
+body{
+  padding: 40px;
+  background-color: #4268a5;  
+} */
+
+h1 {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  /* font-size: 28px; */
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+h1 {
+  animation: animated-text 2s steps(10,end) 1s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* moving picture */
+/* <div id="sky">
+	<div id="clouds"></div>
+</div> */
+#sky {
+	overflow: hidden;
+}
+#clouds {
+	width: 200%;
+	height: 400px;
+	background-image: url('pic.jpg');
+	background-size: cover;
+	-webkit-animation: movingclouds 25s linear infinite;
+	-moz-animation: movingclouds 25s linear infinite;
+	-o-animation: movingclouds 25s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-left: 0%;}
+	100% {margin-left: -100%;}
+}
+
+</style>
+<!-- class="animated infinite bounce delay-2s" -->
+<body class="body">
     <div class="ui container">
         <hr>
-        <div class="ui labeled icon menu">
+        <div class="animated fadeInUp slower ui labeled icon menu" id="menu">
             <div class="active item">
                 <i class="home icon"></i> <a href="">Home</a>
             </div>
@@ -57,121 +179,51 @@
             </div>
         </div>
 
-        
-        <div class="ui segment container">
-            <div class="jumbotron p-4 p-md-5" style="font-family:Noto Serif SC">
-                <h1 class="display-4"><a href="#" style="color: #3eb722;font-family:Noto Serif SC;">xxtramile Music</a></h1>
-                <p class="lead" style="font-family:Noto Serif SC">an agency based in Cape Town which operates in four main areas: Events, Artist Development and Management, Content licensing, Production and Publishing of music. The xxtramile Music policy is to explore the underprivileged areas in the Western Cape region and prepare them with knowledge of the entertainment industry. </p>
-                <hr class="my-4">
-                <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-                <a class="btn btn-primary btn-lg" href="templates/about.html" role="button">Learn more</a>
-              </div>
 
-              <!-- first two cards -->
-              <!-- <div class="row mb-2">
-                <div class="col-md-6">
-                    <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                <img src="./static/images/xxm/xxtramile.jpg" class="card-img" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                    <img src="./static/images/xxm/xxtramile.jpg" class="card-img" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                    </div>
-                                </div>
-                        </div>
-                </div>
-              </div> -->
-
-              <!-- content -->
-
-              <!-- <div class="row">
-                    <div class="col-md-8 blog-main">
-                        <h3 class="pb-4 mb-4 font-italic border-bottom">From the Firehose</h3>
-                        <div class="blog-post">
-                            <h2 class="blog-post-title">Music</h2>
-                            <p class="blog-post-meta"> 11 March, 2019 by <a href="#">Mayaya</a></p>
-                            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-                            <p>It is not mandatory that the user use structured documentation in his/her patient charting procedures. However, while using free text may be familiar and seem easier, taking the time to learn more about the benefits associated with using structured data entry could greatly benefit the user's practice on many levels. Structured data entry not only makes the user more efficient, it will also be more likely to allow the user to receive greater reimbursement in the near future. In fact, it appears those physicians who choose not to participate in Meaningful Use and P4P initiatives will likely be penalized</p>
-                        </div>
-                        <br><hr>
-                        <div class="blog-post">
-                            <h2 class="blog-post-title">Events</h2>
-                            <p class="blog-post-meta"> 11 March, 2019 by <a href="#">Mayaya</a></p>
-                            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-                            <p>It is not mandatory that the user use structured documentation in his/her patient charting procedures. However, while using free text may be familiar and seem easier, taking the time to learn more about the benefits associated with using structured data entry could greatly benefit the user's practice on many levels. Structured data entry not only makes the user more efficient, it will also be more likely to allow the user to receive greater reimbursement in the near future. In fact, it appears those physicians who choose not to participate in Meaningful Use and P4P initiatives will likely be penalized</p>
-                        </div>
-                        <br><hr>
-                        <div class="blog-post">
-                            <h2 class="blog-post-title">Artists</h2>
-                            <p class="blog-post-meta"> 11 March, 2019 by <a href="#">Mayaya</a></p>
-                            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-                            <p>It is not mandatory that the user use structured documentation in his/her patient charting procedures. However, while using free text may be familiar and seem easier, taking the time to learn more about the benefits associated with using structured data entry could greatly benefit the user's practice on many levels. Structured data entry not only makes the user more efficient, it will also be more likely to allow the user to receive greater reimbursement in the near future. In fact, it appears those physicians who choose not to participate in Meaningful Use and P4P initiatives will likely be penalized</p>
-                        </div>
-                    </div>
-                    <aside class="col-md-4 blog-sidebar">
-                        <div class="p-4 mb-3 bg-light rounded">
-                            <h4 class="font-italic">About</h4>
-                            <p class="mb-0">If the user desires to participate in "Meaningful Use" and "Pay for Performance" (P4P) initiatives, to engage in practice quality improvements, and/or electronic prescribing, then the user will need to use structured data</p>
-                        </div>
-                        <div class="p-4">
-                            <h4 class="font-italic">Archives</h4>
-                            <ol class="list-unstyled mb-0">
-                                <li><a href="#"> March 2018 </a></li>
-                                <li><a href="#"> April 2018 </a></li>
-                                <li><a href="#"> May 2018 </a></li>
-                                <li><a href="#"> July 2018 </a></li>
-                            </ol>
-                        </div>
-                    </aside>
-              </div> -->
-
-            <br><hr>
-
-            <div id="footer"></div>
-            
-            <script id="footerScript" type="text/x-handlebars-template">
-                <div class="ui vertical footer segment">
-                    <div class="ui container">
-                        <div class="ui stackable divided equal height stackable grid">
-                            {{#each data}}
-                            <div class="{{column}} wide column">
-                                <h4 class="ui header">{{header}}</h4>
-                                <div class="ui link list">
-                                    {{#each this.link}}
-                                    <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
-                                   {{/each}}
-
-                                </div>
-                            </div>
-                            {{/each}}
-                        </div>
-                    </div>
-                </div>
-            </script>
-        </div>
     </div>
+    <div class="ui container">
+        <!-- <div class="ui segment container"> -->
+                <div id="carouselExampleSlidesOnly">
+                        <div class="carousel-inner" id="sky">
+                          <div class="carousel-item active" id="clouds">
+                            <img src="static/images/club/2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <!-- <hr> -->
+            <div class="jumbotron p-4 p-md-5" style="font-family:Noto Serif SC; background: black; color: white">
+                <h1 class="display-4">xxtramile MUSIC</h1>
+                <p class="lead" style="font-family:Serif">xxtramile music is an agency based in Cape Town which operates in four main areas: Events, Artist Development and Management, Content licensing, Production and Publishing of music. The xxtramile Music policy is to explore the underprivileged areas in the Western Cape region and prepare them with knowledge of the entertainment industry. </p>
+                <hr class="my-4">
+                 <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+                <a class="animated zoomIn delay-2s btn btn-primary btn-lg" href="templates/about.html" role="button">Learn more</a>
+              </div>
+              <hr>
+    </div>
+    <div id="footer"></div>
+    <hr><hr>
+    <div></div>
     
+    <script id="footerScript" type="text/x-handlebars-template">
+        <div class="ui vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable divided equal height stackable grid" style="color: red;">
+                    {{#each data}}
+                    <div class="{{column}} wide column">
+                        <h4 class="ui header">{{header}}</h4>
+                        <div class="ui link list">
+                            {{#each this.link}}
+                            <a href="{{url}}" class="item" target="_blank" style="text-align: left;">{{{title}}}</a>
+                           {{/each}}
+
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </script>
     <script src="static/js/index.js"></script>
 </body>
 
