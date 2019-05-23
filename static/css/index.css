@@ -41,6 +41,8 @@
     @media only screen and (min-width: 600px)  {
         body {
             background: url("../images/club/bg.jpg");
+            /* background-repeat: no-repeat; */
+            background-attachment: fixed;
         }
         .w-100 {
             height: fit-content;

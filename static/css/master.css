@@ -28,7 +28,7 @@ body {
 }
 
 .ui.container {
-	flex: 1;
+	/* flex: 1; */
 }
 
 .ui.centered.header,
