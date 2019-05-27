@@ -3,12 +3,32 @@ hr {
   visibility: hidden;
 }
 
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
 body {
   background: url("../images/xxm/xxtramile.jpg") no-repeat fixed;
+  opacity: 1;
+  transition: 1s opacity;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/* menu bar calors */
+#menu {
+  background-color: #f7f9f7;
+  background: linear-gradient(to bottom right, #69fb6b, #f7f9f7);
+}
+
+
+#footer {
+	color: wheat;
 }
 
 .ui.container {
-  background: white;
+	/* flex: 1; */
 }
 
 .ui.centered.header,

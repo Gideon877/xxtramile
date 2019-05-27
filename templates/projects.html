@@ -13,153 +13,145 @@
     <script src="../static/css/semantic/semantic.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Hind+Siliguri|Libre+Baskerville|Lora|Noto+Serif|PT+Sans+Narrow|Playfair+Display" rel="stylesheet" />
     <link rel="stylesheet" href="../static/css/master.css" />
+    <link rel="stylesheet" href="../static/css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Noto+Serif+SC|Open+Sans|Playfair+Display|Work+Sans" rel="stylesheet">
     <script src="../static/js/lib/data.js"></script>
     <script src="../static/js/lib/handlebars-v4.0.12.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 </head>
 <style>
-    .ui.horizontal.divider:after,
-    .ui.horizontal.divider:before {
-        background-image: url('');
+    p {
+        color: green;
+        text-transform: none;
+        font-size: medium;
+        text-align: -webkit-center;
     }
 
-    ;
-
-    body {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: large;
-        text-transform: inherit
-    }
 </style>
 
-<body>
+<body class="body">
     <div class="ui container">
         <hr>
-        <div class="ui labeled icon menu">
+        <div class="animated fadeInDown slower ui labeled icon menu" id="menu">
             <div class="item">
                 <i class="home icon"></i> <a href="../index.html">Home</a>
             </div>
             <div class="item">
-                <i class="users icon"></i> <a href="founder.html">Founder</a>
+                <i class="info circle icon"></i> <a href="about.html">About</a>
             </div>
-            <div class="item">
-                    <i class="info circle icon"></i> <a href="about.html">About</a>
-                </div>
 
-            <div class="right item">
+            <div class="active right item">
                 <i class="music icon"></i>
-                <a href="artists.html">Artists</a>
-            </div>
-            <div class="active item">
-                <i class="random icon"></i> <a>Projects</a>
-            </div>
-        </div>
-
-        <div class="ui segment container">
-            <h4 class="ui horizontal divider header">
-                <i class="handshake icon"></i> Introducing
-            </h4>
-
-            <div class="ui segment">
-
-            <!-- <div class="ui list">
-                <div class="item">
-                    <i class="folder icon"></i>
-                    <div class="content">
-                        <div class="header">mixtapes</div>
-                        <div class="description">source files for projects</div>
-                        <div class="list">
-                            <div class="item">
-                                <i class="folder icon"></i>
-                                <div class="content">
-                                    <div class="header">harmax projects</div>
-                                    <div class="description">mixtape 2018</div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                    <i class="folder icon"></i>
-                                    <div class="content">
-                                        <div class="header">harmax projects</div>
-                                        <div class="description">mixtape 2019</div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                        <i class="folder icon"></i>
-                        <div class="content">
-                            <div class="header">ep</div>
-                            <div class="description">source files for projects</div>
-                            <div class="list">
-                                <div class="item">
-                                    <i class="folder icon"></i>
-                                    <div class="content">
-                                        <div class="header">harmax projects</div>
-                                        <div class="description">ep 3/5/2018</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                        <i class="folder icon"></i>
-                                        <div class="content">
-                                            <div class="header">harmax projects</div>
-                                            <div class="description">ep 2/4/2019</div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-                 -->
-                <div class="ui list">
-                    <div class="item">
-                        <img class="ui avatar image" src="../static/images/xxm/ttad.jpg">
-                        <div class="content">
-                            <a class="header" href="https://www.facebook.com/thatthingaboutdeep"  target="_blank">That Thing About Deep</a>
-                            <div class="description">
-                                <p style="text-transform: none; font-size: small">
-                                    It's a beat that bridges all cultures, creeds and ethnicities, connecting all who feel it, in a diverse and dynamic crowd, focused on quality musical experiences. <br>
-                                    It is a common rhythm that unites, allowing people from different backgrounds to connect and experience the musical journey together. <br> <hr>
-                                    <i>August 2018 ©</i>
-                                </p>
-                            </div>
-                        </div>
-    
-                        <div class="ui clearing divider"></div>
-    
-                        <div class="container">
-                                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/505922733&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                            <! <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/456151212&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
-                        </div>
-                    </div>
-                </div>
-
-                <div id="footer"></div>
-            
-                <script id="footerScript" type="text/x-handlebars-template">
-                    <div class="ui vertical footer segment">
-                        <div class="ui container">
-                            <div class="ui stackable divided equal height stackable grid">
-                                {{#each data}}
-                                <div class="{{column}} wide column">
-                                    <h4 class="ui header">{{header}}</h4>
-                                    <div class="ui link list">
-                                        {{#each this.link}}
-                                        <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
-                                       {{/each}}
-    
-                                    </div>
-                                </div>
-                                {{/each}}
-                            </div>
-                        </div>
-                    </div>
-                </script>
+                <a href="artists.html">Projects</a>
             </div>
         </div>
     </div>
 
+    <div class="ui container">
+        <br>
+        <h2 class="ui horizontal divider header" style="color: honeydew;">
+            <i class="animated bounce delay-2s slow handshake icon"></i> Introducing
+        </h2>
+        <div class="ui big middle aligned list">
+            <div class="item" style="padding: 12px;background: aliceblue;">
+                <img class="ui avatar image" src="../static/images/xxm/ttad.jpg">
+                <div class="content">
+                    <a class="animated slideInLeft faster header" href="https://www.facebook.com/thatthingaboutdeep"  target="_blank">That Thing About Deep</a>
+                </div>
+                <div class="ui section divider"></div>
+                <div class="description">
+                    <p>
+                        It's a beat that bridges all cultures, creeds and ethnicities, connecting all who feel it, in a diverse and dynamic crowd, focused on quality musical experiences. 
+                        It is a common rhythm that unites, allowing people from different backgrounds to connect and experience the musical journey together. <br> <hr>
+                        <i>August 2018 ©</i>
+                    </p>
+                </div>
+                <div class="embed-responsive embed-responsive-21by9">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/505922733&color=%23232323&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+                <div class="ui clearing divider"></div>
+                <!-- <div class="ui section divider"></div> -->
+
+            </div>
+            <div class="item"style="padding: 12px;background: aliceblue;">
+                <img class="ui avatar image" src="../static/images/artists/HarmaxProjects.jpg">
+                <div class="content">
+                    <a class="header" href="https://www.facebook.com/harmaxprojects"  target="_blank">Harmax Projects</a>
+                </div>
+                <div class="ui section divider"></div>
+                <div class="description">
+                    <p><b class="hp">Harmax Projects</b> is a duo from Khayelitsha formed by
+                        Bongani Moyeni (Hardsoul) and
+                        Masixole Max Faca (Finish) in 2012. They produce genres
+                        such as Electro, Techno, Deep
+                        Tech, Tribal music and Afro House but they are also
+                        flexible to other none-house genres.
+                        Bongani Moyeni begin in the music industry as DJ in
+                        2009. He has perfomed in stage
+                        with artists such as DJ Tira, Problem child, Lulo Cafe,
+                        DJ Mbuso, Bignuzz, Twitty Zintle,
+                        Pepsi, Fisherman, Mahoota and Vinny da Vincy. </p>
+                    <p>He fell in love music production in 2014
+                        when he met Masixole. Masixole Faca has been doing music
+                        production since 2007. He
+                        started producing deep house and tribal music. He spend
+                        time listening to international
+                        house music and decide adapt from it. He began to
+                        produce Deep Tech, Techno and
+                        Electro House Music. He has featured in DJ MIZZ’s EP
+                        called Mandulo and has also
+                        featured on Deepconsoul’s EP called Mvelingqangi.</p>
+                    <img class="ui right floated image"
+                        src="../static/images/artists/Harmax.jpg" style="padding:10px;">
+                    <p>They have made a research in the global scene and
+                        downloaded more of Electro, Techno
+                        music gathering as much possible information they find
+                        and attending electronic music
+                        events. They also made a research in the local scene
+                        since their style of music was not
+                        appreciated Then the Duo had time to invent a new style.</p>
+                    <p>They have decided to fuse all
+                        the sounds of Techno, African and Electro to create a
+                        new taste that will accommodate
+                        more nations and which they believe it is truly
+                        expressing their love for music. <br><br>
+                        We have plans on releasing the EP on Traxsource through
+                        Ambious Records.</p>
+                </div>
+                <div class="ui section divider"></div>
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/499121307&color=%2372c3b2&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/395812887&color=%23de55d9&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div>
+                <!-- <div class="ui clearing divider"></div> -->
+                <!-- <div class="ui section divider"></div> -->
+            </div>
+        </div>
+
+    </div>
+        
+    <div id="footer"></div>
+    <script id="footerScript" type="text/x-handlebars-template">
+        <div class="ui vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable divided equal height stackable grid">
+                    {{#each data}}
+                    <div class="{{column}} wide column">
+                        <h4 class="ui header">{{header}}</h4>
+                        <div class="ui link list">
+                            {{#each this.link}}
+                            <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
+                            {{/each}}
+
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </script>
     <script src="../static/js/index.js"></script>
 </body>
 
